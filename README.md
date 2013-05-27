@@ -23,7 +23,7 @@ It's recommended to make salt for session token , and session key.
 Session token:  
 utils.get_session_token()
 
-Session key:
+Session key:  
 app.secret_key = 'KeyOfSession' (in confg.py)
 
 ## Contact
