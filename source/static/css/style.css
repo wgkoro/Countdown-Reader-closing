@@ -1,0 +1,220 @@
+/*
+* Count down the days to Google Reader closing.
+* http://goodbyereader.wingall.com/
+* 
+* Copyright (c) 2013, @wg_koro (http://zafiel.wingall.com/)
+* 
+* Licensed under the MIT.
+**/
+
+* {
+	zoom	: 1;
+}
+
+body {
+	font-size	: 100%;
+	color		: #4D4D4D;
+	line-height	: 125%;
+	padding		: 0;
+	margin		: 0;
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+	background-image	: url('/static/img/nature.jpg');
+	background-repeat	: none;
+	background-attachment	: fixed;
+	background-position	: left top;
+}
+
+#main {
+	margin		: 10px auto 90px auto;
+	width		: 100%;
+}
+
+#main table{
+	margin		: 0 auto;
+	text-align	: center;
+	border-collapse	: separate;
+	border-spacing	: 5px;
+}
+
+#main td {
+	position	: relative;
+	height		: 170px;
+	width		: 310px;
+	overflow	: hidden;
+}
+
+td#watch {
+	width	: 620px;
+	color	: #fff;
+	font-size	: 200%;
+	border	: none;
+}
+
+div.face,
+div.move {
+	display	: none;
+	position	: absolute;
+	border	: none;
+	top		: 0;
+	left	: 0;
+	padding	: 5px;
+	width	: 300px;
+	height	: 160px;
+	z-index	: 2;
+	color	: #fff;
+	text-align	: left;
+	font-size	: 100%;
+	overflow: hidden;
+}
+
+div.face {
+	display	: block;
+	position: relative;
+	z-index	: 1;
+	background-color	: #999;
+}
+
+div.move {
+	height	: 158px;
+}
+
+#request {
+	display	: none;
+}
+
+
+/* ===========================
+　テキスト
+================*/
+#title {
+	position: absolute;
+	top		: 10px;
+	left	: 10px;
+	width	: 600px;
+	height	: 200px;
+
+	font-family	: cursive, 'Times New Roman';
+	text-align	: left;
+	line-height	: 130%;
+	font-size	: 60px;
+}
+
+#count_down {
+	font-size	: 13px;
+}
+
+#day,
+#hour,
+#minute,
+#second {
+	font-size	: 60px;
+	font-family	: 'Century Gothic';
+}
+
+/* ===========================
+　現在時刻
+================*/
+#current	{
+	position	: absolute;
+	bottom		: 10px;
+	right		: 10px;
+
+	font-size	: 15px;
+}
+
+
+/* ===========================
+　各ツイート
+================*/
+.name a,
+.time a{
+	color	: #fff;
+	text-decoration	: none;
+}
+
+.text a{
+	color	: #fff;
+	text-decoration	: underline;
+}
+
+.name a:hover,
+.text a:hover,
+.time a:hover{
+	text-decoration	: underline;
+	color	: #ccc;
+}
+
+.image {
+	position	: absolute;
+	top			: 5px;
+	left		: 5px;
+}
+
+.text,
+.name {
+	text-indent	: 50px;
+}
+
+.name {
+	font-weight		: bold;
+	font-size		: 100%;
+	margin-bottom	: 3px;
+}
+
+.text {
+	font-size	: 13px;
+}
+
+.time {
+	position	: absolute;
+	bottom		: 5px;
+	right		: 30px;
+	font-size	: 70%;
+	text-align	: right;
+}
+
+.twitter-logo {
+	position	: absolute;
+	bottom		: 0;
+	right		: 0;
+}
+
+
+/* ===========================
+　SNS
+================*/
+#sns_box {
+	position: fixed;
+
+	width	: 550px;
+	height	: 80px;
+
+	bottom	: 10px;
+	right	: 10px;
+	text-align	: right;
+}
+
+.sns {
+	display	: inline;
+	margin	: 0 0 0 5px;
+}
+
+#facebook {
+	position	: relative;
+	top	: 10px;
+}
+
+#plus div{
+	display	: inline;
+}
+
+#link a{
+	color	: #fff;
+	font-family	: cursive, 'Times New Roman';
+	text-decoration	: underline;
+	font-size	: 21px;
+}
+
+#link a:hover {
+	color	: #ccc;
+}

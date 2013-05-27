@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="viewport" content="width=640">
+
+<meta property="og:site_name" content="Good-bye Google reader">
+<meta property="og:title" content="Closing Google Reader count down page">
+<meta property="og:url" content="http://goodbyereader.wingall.com/">
+<meta property="og:type" content="article">
+
+<title>Count down the days to Google Reader closing</title>
+
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+{% block css%}{% endblock %}
+
+<style type='text/css'>
+    body {
+        background-image	: url('/static/img/{{ background }}');
+    }
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" charset='utf-8'></script>
+<script type='text/javascript'>
+	window.jQuery || document.write('<scr' +'ipt src="/static/js/jquery.js" type="text/javascript" charset="utf-8"></scr' +'ipt>');
+</script>
+<script type="text/javascript" src="/static/js/jquery.socialbutton.min.js" charset='utf-8'></script>
+<script type='text/javascript'>
+	$(function(){
+		$('#hatena').socialbutton('hatena', { button: 'vertical'});
+		$('#pinterest').socialbutton('pinterest', { button: 'vertical'});
+		$('#twitter').socialbutton('twitter', { button: 'vertical',  text:'Count down the days to Google Reader closing'});
+		$('#plus').socialbutton('google_plusone', { lang: 'en',  size:'tall'});
+		$('#facebook').socialbutton('facebook_like', { button: 'box_count'});
+	});
+</script>
+
+</head>
+<body>
+
+	<div id='main'>
+		<table>
+			<tbody>
+				{% block body %}{% endblock %}
+			</tbody>
+		</table>
+	</div>
+
+	<form id='request'>
+		<input type='hidden' name='_token' id='_token' value='{{ csrf }}'>
+		<input type='hidden' value='1' name='q'>
+	</form>
+	<script type="text/javascript" src="/static/js/bye.js" charset='utf-8'></script>
+
+	<div id='sns_box'>
+        <div class='sns' id='link'>
+            <a href='https://twitter.com/wg_koro' target='_blank'>Twitter</a>
+            &nbsp;
+            <a href='http://zafiel.wingall.com/archives/7499' target='_blank'>Blog</a>
+        </div>
+		<div class='sns' id='hatena'></div>
+		<div class='sns' id='pinterest'></div>
+		<div class='sns' id='twitter'></div>
+		<div class='sns' id='plus' style='display:inline;'></div>
+		<div class='sns' id='facebook'></div>
+	</div>
+
+</body>
+</html>

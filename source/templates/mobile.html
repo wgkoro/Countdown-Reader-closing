@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/mobile.css">
+{% endblock %}
+{% block body %}
+				<tr>
+					<td id='watch' colspan='2'>
+						<div id='title'>
+							Good-bye<br>
+							Google Reader...
+						</div>
+
+						<div id='count_down'>
+							<span id='day'>00</span>days 
+							<span id='hour'>00</span>hours 
+							<span id='minute'>00</span>minutes 
+							<span id='second'>00</span>seconds left..
+						</div>
+
+						<div id='current'>
+							Current time : <span id='left'>00:00:00</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+{% endblock %}

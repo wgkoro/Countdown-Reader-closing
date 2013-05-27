@@ -1,0 +1,13 @@
+body {
+	background-image	: url('/static/img/back_mobile.jpg');
+}
+
+#count_down {
+	position	: relative;
+	top			: 54px;
+}
+
+td#watch {
+	height		: 350px;
+}
+
